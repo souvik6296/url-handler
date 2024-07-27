@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="google-site-verification" content="0dUotBkoQ4t48eF6ZR8KiiydhNPeBP0xcaOyEJ0RG2Q" />
+</head>
+<body>
+    <p id="red">You will be redirected in <span id="count">10</span> Seconds</p>
+    <script>
+        var url = window.location.href;
+        const key = url.substring(url.indexOf("?")+1);
+        const data = {
+            cnlpuhome: "https://codingninjaslpu.rf.gd",
+            cnlpuevent: "https://www.codingninjaslpu.xyz",
+            affiliate: "https://souvik6296.github.io/newlaunchproducts/",
+            happysolar: "https://souvik6296.github.io/HappySolar/",
+        }
+        const elem = document.getElementById("count");
+        var count= 9;
+        window.setInterval(()=>{
+            if(count!=0){
+                elem.innerText=count;
+                count= count-1;
+            }else{
+                window.clearInterval();
+                window.location.href= data[key];
+            }
+        },1000);
+    </script>
+</body>
+</html>
